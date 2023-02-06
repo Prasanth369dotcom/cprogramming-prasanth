@@ -1,0 +1,33 @@
+#include<stdio.h>
+void main()
+{
+    int marks;
+    printf("Enter your marks ");
+    scanf("%d",&marks);
+    if(marks<0 || marks>100)
+    {
+        printf("Wrong Entry");
+    }
+    else if(marks<30)
+    {
+        printf("fail");
+    }
+    else if(marks>=30 && marks<40)
+    {
+        printf("third class");
+    }
+    else if(marks>=40 && marks<50)
+    {
+        printf("second class");
+    }
+    else if(marks>=60 && marks<75)
+    {
+        printf("first class");
+    }
+    else if(marks>75)
+    {
+        printf("distinction");
+    }
+    getch();
+}
+		
