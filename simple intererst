@@ -1,30 +1,31 @@
-#include <stdio.h>
-#include <string.h>
-void swap(char* x, char* y)
-{
-char temp;
-temp = *x;
-*x = *y;
-*y = temp;
+#include<stdio.h>
+float interest(int P, int N)
+{ char ch[1];
+printf("Are you a senior citizen(y/n): ");
+scanf("%s", &ch);
+ float SI,r;
+ if(strcmp("y",ch)==0){
+r=12;
 }
-void permute(char* a, int l, int r)
-{
-int i;
-if (l == r)
-printf("%s\n", a);
-else {
-for (i = l; i<= r; i++) {
-swap((a + l), (a + i));
-permute(a, l + 1, r);
-swap((a + l), (a + i));
-}
-}
-}
+ else if(strcmp("n",ch)==0){
+r=10;
+ }
+ SI=P*r*N/100.0;
+ return SI;
+} 
 main()
 {
-char str[20];
-printf("Enter a number : ");
-scanf("%s",&str);
-int n = strlen(str);
-permute(str, 0, n - 1);
+ int p,n;
+ float r,Z;
+printf("Enter Principal Amount : ");
+scanf("%d",&p);
+printf("Enter Time Period : ");
+scanf("%d",&n);
+ if(p>0 && n>0){
+ Z=interest(p,n);
+printf("\nSimple Interest : %.2f\n",Z);
+ }
+ else{
+printf("Invalid input");
+ 
 }
