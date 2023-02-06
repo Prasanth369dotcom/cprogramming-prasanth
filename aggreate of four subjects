@@ -1,0 +1,39 @@
+#include<stdio.h>
+void main()
+{
+    int a,b,c,d,e,f,g;
+    printf("first subject marks:");
+    scanf("%d",&a);
+    printf("second subject marks:");
+    scanf("%d",&b);
+printf("third subject marks:");
+scanf("%d",&c);
+printf("fourth subject marks:");
+scanf("%d",&d);
+e=(a+b+c+d)/4;
+printf("the score is%d",e);    
+    
+	
+	 if(e<30)
+    {
+        printf("fail");
+    }
+    else if(e>=30 && e<40)
+    {
+        printf("third class");
+    }
+    else if(e>=40 && e<50)
+    {
+        printf("second class");
+    }
+    else if(e>=60 && e<75)
+    {
+        printf("first class");
+    }
+    else if(e>75)
+    {
+        printf("distinction");
+    }
+    getch();
+}
+		
